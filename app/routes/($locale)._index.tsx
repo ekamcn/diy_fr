@@ -27,10 +27,10 @@ const sections = [
             <p>
               Si vous ne trouvez pas la réponse à votre question, merci de nous envoyer un e-mail à{' '}
               <a
-                href="mailto:contact@refletjardin.com"
-                className="hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
+               className=" hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4 text-wrap"
               >
-                contact@refletjardin.com
+                {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>
             </p>
           </div>
@@ -135,8 +135,8 @@ export default function Homepage() {
         title="Cosy Critters3 "
         imageUrl={import.meta.env.VITE_BANNER}
         mobileImageUrl={import.meta.env.VITE_MOBILE_BANNER}
-        subtitle="Bienvenue chez Esprit Auto Moto, la boutique en ligne pensée par des passionnés, pour des passionnés."
-        description="Que vous rouliez en voiture ou en deux-roues, que vous soyez amateur de tuning, adepte de sensations fortes ou simplement soucieux de bien entretenir votre véhicule, Esprit Auto Moto est là pour vous équiper avec style, efficacité et performance."
+        subtitle="Votre boutique en ligne pour tous vos projets de Jardinage & bricolage!"
+        description={`Bienvenue chez ${import.meta.env.VITE_STORE_TITLE} , votre destination en ligne dédiée au jardinage & bricolage ! Explorez notre sélection soigneusement choisie d'outils professionnels, de matériaux de construction de première qualité, d'accessoires ingénieux et de peintures éclatantes. Simplifiez votre expérience d'achat avec notre interface conviviale. Chez ${import.meta.env.VITE_STORE_TITLE} , nous avons tout ce qu'il vous faut pour concrétiser vos projets de bricolage. Commencez à créer dès maintenant !`}
         buttonText="Shop Now"
         buttonUrl=""
       />
