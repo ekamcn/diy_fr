@@ -14,7 +14,7 @@ export default function PaymentTermsPage() {
           Conditions de Paiement
         </p>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="payment-methods">
             Modalités de Paiement
           </h2>
@@ -26,7 +26,7 @@ export default function PaymentTermsPage() {
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="accepted-payments">
             Modes de Paiement Acceptés
           </h2>
@@ -38,41 +38,50 @@ export default function PaymentTermsPage() {
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="payment-security">
-          Sécurisation des Paiements
+            Sécurisation des Paiements
           </h2>
           <p className="leading-6 sm:leading-7 !text-sm">
-          Toutes les transactions effectuées sur notre site sont sécurisées grâce à un protocole de chiffrement SSL (Secure Socket Layer) qui garantit la confidentialité des informations transmises. Nous nous engageons à protéger les données personnelles de nos clients conformément au Règlement Général sur la Protection des Données (RGPD).
+            Toutes les transactions effectuées sur notre site sont sécurisées
+            grâce à un protocole de chiffrement SSL (Secure Socket Layer) qui
+            garantit la confidentialité des informations transmises. Nous nous
+            engageons à protéger les données personnelles de nos clients
+            conformément au Règlement Général sur la Protection des Données
+            (RGPD).
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="invoicing">
-          Facturation
+            Facturation
           </h2>
           <p className="leading-6 sm:leading-7 !text-sm">
-          Une fois votre commande passée, une facture détaillée vous sera envoyée par email. Veuillez vérifier les informations de facturation et de livraison pour garantir la bonne réception de votre commande.
+            Une fois votre commande passée, une facture détaillée vous sera
+            envoyée par email. Veuillez vérifier les informations de facturation
+            et de livraison pour garantir la bonne réception de votre commande.
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="billing-accuracy">
-          Exactitude des Informations de Facturation
-
+            Exactitude des Informations de Facturation
           </h2>
           <p className="leading-6 sm:leading-7 !text-sm">
-          Vous êtes responsable de fournir des informations de facturation et de livraison exactes et à jour. En cas de modification de ces informations, vous devez nous en informer dans les plus brefs délais pour éviter tout retard ou problème de livraison.
+            Vous êtes responsable de fournir des informations de facturation et
+            de livraison exactes et à jour. En cas de modification de ces
+            informations, vous devez nous en informer dans les plus brefs délais
+            pour éviter tout retard ou problème de livraison.
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="refunds">
-          Remboursements
-
+            Remboursements
           </h2>
           <p className="leading-6 sm:leading-7 !text-sm">
-          Si vous souhaitez obtenir un remboursement, veuillez nous contacter à l'adresse suivante :{' '}
+            Si vous souhaitez obtenir un remboursement, veuillez nous contacter
+            à l'adresse suivante :{' '}
             <a
               href={`mailto:${customerSupportEmail}`}
               className="underline underline-offset-4"
@@ -80,43 +89,58 @@ export default function PaymentTermsPage() {
             >
               {customerSupportEmail}
             </a>
-            . Vous disposez d'un délai de 30 jours à compter de la réception de votre commande pour exercer votre droit de rétractation.
+            . Vous disposez d'un délai de 30 jours à compter de la réception de
+            votre commande pour exercer votre droit de rétractation.
           </p>
           <p className="leading-6 sm:leading-7 !text-sm mt-2">
-          Le remboursement sera effectué sur le moyen de paiement utilisé lors de la commande et peut prendre entre 3 et 5 jours ouvrables pour apparaître sur votre compte bancaire.
+            Le remboursement sera effectué sur le moyen de paiement utilisé lors
+            de la commande et peut prendre entre 3 et 5 jours ouvrables pour
+            apparaître sur votre compte bancaire.
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="complaints-disputes">
-          Réclamations et Litiges
-
-
+            Réclamations et Litiges
           </h2>
           <p className="leading-6 sm:leading-7 !text-sm">
-          En cas de réclamation ou de litige concernant une transaction, veuillez nous contacter à l'adresse email mentionnée ci-dessus. Nous nous efforcerons de résoudre toute réclamation dans les plus brefs délais.
+            En cas de réclamation ou de litige concernant une transaction,
+            veuillez nous contacter à l'adresse email mentionnée ci-dessus. Nous
+            nous efforcerons de résoudre toute réclamation dans les plus brefs
+            délais.
           </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <h2 className="!text-base font-semibold" id="terms-changes">
-          Modifications des Conditions de Paiement
-
+            Modifications des Conditions de Paiement
           </h2>
           <p className="leading-6 sm:leading-7 !text-sm">
-          Nous nous réservons le droit de modifier les présentes conditions de paiement à tout moment. Toute modification sera publiée sur cette page et vous serez informé(e) par email. En continuant à utiliser notre site après la publication des modifications, vous acceptez celles-ci.
+            Nous nous réservons le droit de modifier les présentes conditions de
+            paiement à tout moment. Toute modification sera publiée sur cette
+            page et vous serez informé(e) par email. En continuant à utiliser
+            notre site après la publication des modifications, vous acceptez
+            celles-ci.
           </p>
-          <p>Pour toute question concernant nos conditions de paiement, veuillez nous contacter à : {customerSupportEmail}</p>
-          <p>Pour nous contacter, envoyez seulement un email à : {customerSupportEmail}{' '}ou par téléphone au: {customerServicePhone}, notre équipe se fera un plaisir de vous répondre du lundi au vendredi de 8h à 18h (UTC+1).</p>
+          <p className="leading-6 sm:leading-7 !text-sm">
+            Pour toute question concernant nos conditions de paiement, veuillez
+            nous contacter à : {customerSupportEmail}
+          </p>
+          <p className="leading-6 sm:leading-7 !text-sm">
+            Pour nous contacter, envoyez seulement un email à :{' '}
+            {customerSupportEmail} ou par téléphone au: {customerServicePhone},
+            notre équipe se fera un plaisir de vous répondre du lundi au
+            vendredi de 8h à 18h (UTC+1).
+          </p>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-4'>
           <ul className="list-disc list-inside space-y-1 !text-sm pl-6">
             <li>Société : {companyName}</li>
             <li>SIREN : 30337622200053</li>
             <li>Adresse : {companyAddress}</li>
             <li>
-            Mail :{' '}
+              Mail :{' '}
               <a
                 href={`mailto:${customerSupportEmail}`}
                 className="underline underline-offset-4"
@@ -126,7 +150,7 @@ export default function PaymentTermsPage() {
               </a>
             </li>
             <li>
-            Tel :{' '}
+              Tel :{' '}
               <a
                 href={`tel:${customerServicePhone}`}
                 className="underline underline-offset-4"
@@ -141,4 +165,3 @@ export default function PaymentTermsPage() {
     </div>
   );
 }
-
