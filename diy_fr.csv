@@ -1,0 +1,9 @@
+title,description,handle,match_any,type,operator,value
+Tous les Produits,Tous les produits disponibles,tous-les-produits,TRUE,VARIANT_PRICE,GREATER_THAN,1
+Bricolage et Jardin,Produits de bricolage et jardinage,bricolage-et-jardin,FALSE,vendor,equals,Brico et Jardin
+Dernière Chance,Produits dernière chance,derniere-chance,FALSE,VARIANT_PRICE,GREATER_THAN,25
+Maison et Déco,Produits de décoration et maison,maison-et-deco,FALSE,vendor,equals,Maison et Déco
+Vente Flash,Offres flash à durée limitée,offre-flash,TRUE,VARIANT_PRICE,GREATER_THAN,44
+Vente Flash,Offres flash à durée limitée,offre-flash-02,TRUE,VARIANT_PRICE,LESS_THAN,70
+Tout à moins de 20€,Produits à moins de 20€,tout-a-moins-de-20,FALSE,VARIANT_PRICE,LESS_THAN,21
+Outils,Produits d'outillage,outillage,FALSE,vendor,equals,outillage
