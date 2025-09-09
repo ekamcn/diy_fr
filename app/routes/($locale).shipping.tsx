@@ -59,7 +59,7 @@ export default function ShippingPolicyPage() {
         <div>
           <h2 className="!text-base font-semibold">4. Frais de Livraison</h2>
           <ul className="!list-disc list-inside space-y-1 !text-sm !pl-6">
-            <li>{import.meta.env.VITE_FREE_SHIPPING_POLICY}</li>
+            <li>Gratuit : Les frais de livraison sont gratuits, peu importe le montant de la commande.</li>
           </ul>
         </div>
 
