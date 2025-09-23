@@ -25,13 +25,13 @@ export function ImageBanner({
     //console.log("ImageBanner rendered with imageUrl:", imageUrl);
     return (
         <div className={`w-full ${className}`}>
-            {/* Image Section with responsive heights */}
-            <div className="relative w-full min-h-[28rem] lg:min-h-0 lg:h-auto overflow-hidden">
+            {/* Image Section */}
+            <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[50vh] overflow-hidden">
                 {imageUrl || mobileImageUrl ? (
                     <>
                         {/* Desktop Image */}
                         {imageUrl && (
-                            <div className="hidden sm:block w-full h-full min-h-[28rem] lg:min-h-0">
+                            <div className="hidden sm:block w-full h-full">
                                 <Image
                                     data={{
                                         url: imageUrl,
@@ -47,7 +47,7 @@ export function ImageBanner({
                         )}
 
                         {/* Mobile Image */}
-                        <div className="block sm:hidden w-full h-full min-h-[28rem]">
+                        <div className="block sm:hidden w-full h-full">
                             <Image
                                 data={{
                                     url: mobileImageUrl || imageUrl || '', // fallback if mobileImageUrl not passed
@@ -62,8 +62,8 @@ export function ImageBanner({
                         </div>
                     </>
                 ) : (
-                    // Fallback gradient background with proper height constraints
-                    <div className="w-full h-full min-h-[28rem] lg:min-h-0 bg-gradient-to-br from-stone-200 via-stone-300 to-amber-200">
+                    // Fallback gradient background
+                    <div className="w-full h-full bg-gradient-to-br from-stone-200 via-stone-300 to-amber-200">
                         {/* Geometric shapes */}
                         <div className="absolute inset-0 opacity-10">
                             <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-amber-300 rounded-full blur-xl" />
@@ -72,44 +72,41 @@ export function ImageBanner({
                         </div>
                     </div>
                 )}
-
-                {/* Content overlay for banner content - positioned absolutely like original */}
-                <div className="absolute inset-0 flex items-center justify-center z-10 px-4 lg:px-20">
-                    <div className="w-full text-center flex flex-col items-center justify-center">
-                        <div className="max-w-screen mx-auto">
-                            {/* Description overlay on image like original design */}
-                            <div className="bg-black/40 backdrop-blur-sm rounded-lg p-6 lg:p-8">
-                                <p className="text-sm sm:text-base lg:text-lg text-white mb-4 sm:mb-6 lg:mb-8 leading-relaxed max-w-6xl mx-auto">
-                                    <strong>{subtitle}</strong>
-                                </p>
-                                <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed max-w-6xl mx-auto">
-                                    {description}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            {/* Optional: Keep separate content section if you prefer the original layout */}
-            {/* Uncomment this section if you want to keep content below image instead of overlay */}
-            {/*
+            {/* Content Section - Below Image */}
             <div className="bg-[var(--color-2)] text-white py-2 sm:py-1 lg:py-6 xl:py-8">
                 <div className="px-2 lg:px-8">
                     <div className="w-full text-center flex flex-col items-center justify-center">
                         <div className="max-w-screen mx-auto">
+                            {/* Description */}
                             <p className="text-sm sm:text-base lg:text-lg text-white mb-8 sm:mb-10 lg:mb-12 leading-relaxed max-w-6xl mx-auto">
-                                <strong>{subtitle}</strong>
+                                <strong> {subtitle}</strong>
                                 <br />
                             </p>
                             <p className="!mt-4 text-sm sm:text-base lg:text-lg text-white mb-8 sm:mb-10 lg:mb-12 leading-relaxed max-w-6xl mx-auto">
                                 {description}
                             </p>
+
+                            {/* Call to Action Button
+                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                                <a
+                                    href={buttonUrl}
+                                    className="inline-flex items-center justify-center px-8 sm:px-10 py-3 sm:py-4 bg-white text-stone-900 font-semibold text-sm sm:text-base rounded-lg hover:bg-stone-100 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+                                >
+                                    {buttonText}
+                                </a>
+                                <a
+                                    href="/about"
+                                    className="inline-flex items-center justify-center px-8 sm:px-10 py-3 sm:py-4 border-2 border-white text-white font-semibold text-sm sm:text-base rounded-lg hover:bg-white hover:text-stone-900 transition-colors duration-200"
+                                >
+                                    Learn More
+                                </a>
+                            </div>*/}
                         </div>
                     </div>
                 </div>
             </div>
-            */}
         </div>
     );
 }
@@ -143,7 +140,7 @@ export function ImageBannerVariant({
     };
 
     return (
-        <div className={`relative w-full min-h-[28rem] lg:min-h-screen ${className}`}>
+        <div className={`relative w-full min-h-screen ${className}`}>
             {/* Background */}
             <div className="absolute inset-0 overflow-hidden">
                 {imageUrl ? (
@@ -185,9 +182,9 @@ export function ImageBannerVariant({
 
             {/* Content */}
             <div
-                className={`relative flex flex-col min-h-[28rem] lg:min-h-screen ${layoutStyles[layout]}`}
+                className={`relative flex flex-col min-h-screen ${layoutStyles[layout]}`}
             >
-                <div className="px-4 sm:px-6 lg:px-20 py-12 sm:py-16 lg:py-20">
+                <div className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
                     <div className="max-w-7xl mx-auto">
                         <div className={`max-w-4xl ${layout === 'right' ? 'ml-auto' : ''}`}>
                             <h1
@@ -222,3 +219,4 @@ export function ImageBannerVariant({
 }
 
 export default ImageBanner;
+
